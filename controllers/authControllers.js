@@ -21,7 +21,7 @@ const login = async (req = request, res = response) => {
         if( !veterinario ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Usuario / Contraseña Incorrectos - EMAIL'
+                msg: 'El email no existe'
             })
         }
 
@@ -29,7 +29,7 @@ const login = async (req = request, res = response) => {
         if( !veterinario.confirmado ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Usuario / Contraseña Incorrectos - CONFIRMADO : FALSE'
+                msg: 'Confirma tu cuenta para poder iniciar sesión'
             });
         }
 
